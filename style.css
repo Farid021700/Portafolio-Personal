@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000000;
+    color: whitesmoke;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.contenido{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    margin: 5%;
+    justify-content: space-between;
+}
+
+.titulo{
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.parrafo{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;  
+}
+.parrafo2{
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;  
+    text-align: center;
+}
+
+.destacado{
+    color: red;
+}
+
+.enlaces{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.enlaces_link{
+    width: 280px;
+    background-color: red;
+    color: black;
+    text-align: center;
+    padding: 23.5px 0px;
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.foto-portafolio {
+    animation: flotar 2.5s ease-in-out infinite alternate;
+    height: 450px;
+    width: 350px;
+    border-radius: 50%;
+    border: 1px solid red;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 32px 64px rgba(255, 0, 0, 0.4), 0 4px 16px rgba(0,0,0,0.6);
+    }
+    100% {
+        transform: translateY(-30px) scale(1.05);
+        box-shadow: 0 48px 96px rgba(255, 0, 0, 0.5), 0 8px 32px rgba(0,0,0,0.7);
+    }
+}
+
+/* Adaptación para pantallas de teléfono */
+@media (max-width: 600px) {
+    .contenido {
+        width: 100%;
+        padding: 10px;
+        gap: 24px;
+    }
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        margin: 3% 0;
+        gap: 20px;
+    }
+    .titulo {
+        font-size: 26px;
+        text-align: center;
+    }
+    .parrafo, .parrafo2 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .enlaces {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    .enlaces_link {
+        width: 90%;
+        font-size: 18px;
+        padding: 16px 0;
+    }
+    .foto-portafolio {
+        width: 220px;
+        height: 220px;
+        margin-bottom: 16px;
+    }
+}
