@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-fondo: #000000;
+    --color-texto: whitesmoke;
+    --color-link: #e90707;
+    --color-link-hover: #291616;
+    --color-borde: red;
+    --fuente-titulo: 'Krona One', sans-serif;
+    --fuente-texto: 'Montserrat', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    /*height: 100vh; sirve para ocupar toda la altura de la ventana */
+    box-sizing: border-box;
+}
+
+.header{
+    padding: 2% 0% 0% 10%;
+}
+
+.navegacion{
+    display: flex;
+    gap: 50px;
+
+}
+
+.navegacion_link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-link);
+    text-decoration: none;
+}
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 3% 10%;
+    justify-content: space-between;
+}
+
+.contenido{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.titulo{
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.destacado{    
+    color: var(--color-borde);
+}
+
+.parrafo{
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;  
+}
+
+
+.subtitulo{
+    font-size: 25px;
+    font-family: 'Krona One', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+
+}
+
+/*El hover y el after sirven para que al pasar el raton por encima del subtitulo aparezca una flecha hacia abajo*/
+.subtitulo:hover::after {
+    content: "▼";
+    position: absolute;/* Posicionamiento absoluto respecto al subtitulo */
+    left: 50%;
+    transform: translateX(-50%);/* Centra la flecha horizontalmente */
+    bottom: -28px;/* Ajusta la posición vertical de la flecha */
+    font-size: 30px;/* Tamaño de la flecha */
+    color: var(--color-link);/* Color de la flecha */
+    text-shadow: 0 2px 8px rgba(255, 23, 68, 0.5);/* Sombra para resaltar la flecha */
+    transition: color 0.2s, text-shadow 0.2s;/* Transición suave para el color y la sombra */
+}
+
+.enlaces{
+    display: flex;
+    justify-content: space-between; 
+    /*flex-direction: column; Cambiado a columna para mejor disposición en móvil */
+    /*align-items: center; Centrado horizontalmente */
+    gap: 30px;
+}
+
+
+/* Estilos para los enlaces de redes sociales */
+.enlaces_link{
+    width: 500px;
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    text-align: center;
+    padding: 22.5px 0px;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;/* Flexbox para alinear icono y texto */
+    justify-content: center;/* Centrado horizontal */
+    gap : 8px;/* Espacio entre icono y texto */
+}
+
+/*sirve para que al pasar el raton por encima del enlace este cambie de color*/
+.enlaces_link:hover{
+    cursor: pointer;
+    background-color: var(--color-link-hover);
+    padding: 3%;
+}
+
+.foto-portafolio {
+    /* Para que la imagen suba aún más y baje aún más al flotar, aumenta la diferencia en translateY en la animación */
+    animation: flotar 2.5s ease-in-out infinite alternate;
+    height: 550px;
+    width: 450px;
+    border-radius: 20%;
+    border: 1px solid var(--color-borde);
+    box-shadow: 0 32px 64px rgba(255, 0, 0, 0.4), 0 4px 16px rgba(0,0,0,0.6);
+}
+
+.footer{
+    border-top: 1px solid var(--color-borde);
+    padding: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 480;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 40px;
+    background-color: var(--color-borde);
+    color: var(--color-fondo);
+}
+
+
+@keyframes flotar {
+    0% {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 32px 64px rgba(255, 0, 0, 0.4), 0 4px 16px rgba(0,0,0,0.6);
+    }
+    100% {
+        transform: translateY(-30px) scale(1.05);
+        box-shadow: 0 48px 96px rgba(255, 0, 0, 0.5), 0 8px 32px rgba(0,0,0,0.7);
+    }
+}
+
+/* Adaptación para pantallas medianas (tablets y laptops pequeños) */
+@media (max-width: 1024px) {
+    .header {
+        padding: 4% 0% 0% 4%;
+    }
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 4%;
+        gap: 32px;
+    }
+    .contenido {
+        width: 90%;
+        gap: 28px;
+        align-items: center;
+    }
+    .titulo {
+        font-size: 28px;
+        text-align: center;
+    }
+    .parrafo {
+        font-size: 20px;
+        text-align: center;
+    }
+    .enlaces {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .enlaces_link {
+        width: 95%;
+        font-size: 20px;
+        padding: 18px 0;
+    }
+    .foto-portafolio {
+        width: 320px;
+        height: 320px;
+        margin-bottom: 18px;
+    }
+}
+
+/* Adaptación para pantallas de teléfono */
+@media (max-width: 600px) {
+    .header {
+        padding: 6% 0% 0% 0%;
+        text-align: center;
+    }
+    .navegacion {
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+    }
+    .contenido {
+        width: 100%;
+        padding: 10px;
+        gap: 24px;
+        align-items: center;
+    }
+    .presentacion {
+        flex-direction: column;
+        align-items: center;
+        margin: 3% 0;
+        gap: 20px;
+        padding: 6% 2%;
+    }
+    .titulo {
+        font-size: 22px;
+        text-align: center;
+    }
+    .parrafo, .parrafo2 {
+        font-size: 16px;
+        text-align: center;
+    }
+    .subtitulo {
+        font-size: 18px;
+    }
+    .enlaces {
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+    }
+    .enlaces_link {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 0;
+    }
+    .foto-portafolio {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 12px;
+    }
+    .footer {
+        font-size: 13px;
+        padding: 14px;
+        margin-top: 24px;
+    }
+}
