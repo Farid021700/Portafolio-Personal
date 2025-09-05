@@ -34,7 +34,7 @@ body {
 
 .navegacion_link{
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     color: var(--color-link);
     text-decoration: none;
@@ -54,8 +54,15 @@ body {
 }
 
 .titulo{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: 'Krona One', sans-serif;
+}
+
+.titulo_sobre_mi{
+    color: var(--color-link);
+    font-size: 2.25rem;
+    font-family: 'Krona One', sans-serif;
+    margin-bottom: 20px;
 }
 
 .destacado{    
@@ -63,13 +70,13 @@ body {
 }
 
 .parrafo{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Montserrat', sans-serif;  
 }
 
 
 .subtitulo{
-    font-size: 25px;
+    font-size: 1.563rem;
     font-family: 'Krona One', sans-serif;
     font-weight: 400;
     text-align: center;
@@ -84,7 +91,7 @@ body {
     left: 50%;
     transform: translateX(-50%);/* Centra la flecha horizontalmente */
     bottom: -28px;/* Ajusta la posición vertical de la flecha */
-    font-size: 30px;/* Tamaño de la flecha */
+    font-size: 1.875rem;/* 1rem = 16px por defecto, entonces 1.875rem = 30px */
     color: var(--color-link);/* Color de la flecha */
     text-shadow: 0 2px 8px rgba(255, 23, 68, 0.5);/* Sombra para resaltar la flecha */
     transition: color 0.2s, text-shadow 0.2s;/* Transición suave para el color y la sombra */
@@ -108,7 +115,7 @@ body {
     padding: 22.5px 0px;
     border-radius: 8px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-size: 1.563rem;
     font-weight: 400;
     text-decoration: none;
     display: flex;/* Flexbox para alinear icono y texto */
@@ -137,7 +144,7 @@ body {
     border-top: 1px solid var(--color-borde);
     padding: 24px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 480;
     font-family: 'Montserrat', sans-serif;
     margin-top: 40px;
@@ -168,6 +175,12 @@ body {
         padding: 5% 4%;
         gap: 32px;
     }
+    .foto-portafolio {
+        order: -1;
+        width: 320px;
+        height: 320px;
+        margin-bottom: 18px;
+    }
     .contenido {
         width: 90%;
         gap: 28px;
@@ -191,11 +204,6 @@ body {
         font-size: 20px;
         padding: 18px 0;
     }
-    .foto-portafolio {
-        width: 320px;
-        height: 320px;
-        margin-bottom: 18px;
-    }
 }
 
 /* Adaptación para pantallas de teléfono */
@@ -209,18 +217,24 @@ body {
         gap: 18px;
         align-items: center;
     }
-    .contenido {
-        width: 100%;
-        padding: 10px;
-        gap: 24px;
-        align-items: center;
-    }
     .presentacion {
         flex-direction: column;
         align-items: center;
         margin: 3% 0;
         gap: 20px;
         padding: 6% 2%;
+    }
+    .foto-portafolio {
+        order: -1;
+        width: 160px;
+        height: 160px;
+        margin-bottom: 12px;
+    }
+    .contenido {
+        width: 100%;
+        padding: 10px;
+        gap: 24px;
+        align-items: center;
     }
     .titulo {
         font-size: 22px;
@@ -242,11 +256,6 @@ body {
         width: 100%;
         font-size: 16px;
         padding: 12px 0;
-    }
-    .foto-portafolio {
-        width: 160px;
-        height: 160px;
-        margin-bottom: 12px;
     }
     .footer {
         font-size: 13px;
