@@ -18,7 +18,7 @@
 }
 
 body {
-    background-image: url('/assets/fondo1.jpg');
+    background-image: url('assets/fondo1.jpg');
     background-color: var(--color-fondo);
     color: var(--color-texto);
     /*height: 100vh; sirve para ocupar toda la altura de la ventana */
@@ -515,3 +515,4 @@ body {
         margin-top: 24px;
     }
 }
+
